@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+	<title>Decision Tree Classifier</title>
+	<style type="text/css">
+
+		.sansserif {
+  		font-family: Arial, Helvetica, sans-serif;
+		}
+
+		.form {
+	    margin-top: 20px;
+	    text-align: center;
+		}
+
+		h1{
+			text-align: center;
+			color: white;
+			background-color: #1b1f32;
+		}
+
+		body{
+			background-color: #353C63;
+		}
+
+		table{
+			color: white;
+			border-collapse: collapse;
+			margin-left: auto;
+  			margin-right: auto;
+		}
+
+		td, th{
+			border: 1px solid #dddddd;
+		}
+
+		tr:nth-child(even) {
+ 		background-color: #505b95;
+ 		text-align: left;
+		}
+
+		label{
+			color: white;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+	</style>
+</head>
+<body>
+		<h1 class="sansserif">Survival Predictor</h1>
+		<div class="form">
+	        <form method="post">
+	            <label for="pclass">Choose Class</label>
+			  	<select id="pclass" name="pclass">
+				    <option value=1>Upper Class</option>
+				    <option value=2>Middle Class</option>
+				    <option value=3>Lower Class</option>
+			  	</select><br>
+
+			  	<label for="sex">Choose Gender</label>
+			  	<select id="sex" name="sex">
+				    <option value=1>Male</option>
+				    <option value=2>Female</option>
+			  	</select><br>
+
+	            <input type="number" min="0" name="age" id="age" placeholder="Age"><br>
+	            <input type="number" min="0" name="sibsp" id="sibsp" placeholder="# Siblings"><br>
+	            <input type="number" min="0" name="parch" id="parch" placeholder="# Parents/Children"><br>
+	            <input name="fare" id="fare" placeholder="Fare" step="any"><br><br>
+	            <input type="submit" value="Predict"><br>
+				<p style="color: white">{{return_str}}</p>
+	        </form>
+    	</div><br>
+		<TABLE BORDER="1" WIDTH="27%" CELLPADDING="1" CELLSPACING="1" class="sansserif">
+		   <TR>
+		      <TH COLSPAN="2" ALIGN="CENTER"><h3 style="text-align: center;">Details</h3></TH>
+		   </TR>
+		   <TR>
+		      <TD WIDTH="16%">Passenger Class</TD>
+		      <TD>1st is Upper class<br>
+				  2nd is Middle class<br>
+				  3rd is Lower class
+			  </TD>
+		   </TR>
+		   <TR>
+		      <TD>Sex</TD>
+		      <TD>Gender of the passenger<br>Male or Female</TD>
+		   </TR>
+		   <TR>
+		      <TD>Age</TD>
+		      <TD>Age of the passenger</TD>
+		   </TR>
+		   <TR>
+		      <TD># Siblings</TD>
+		      <TD>Number of Siblings</TD>
+		   </TR>
+		   <TR>
+		      <TD># Parents</TD>
+		      <TD>Number of parents and children</TD>
+		   </TR>
+		   <TR>
+		      <TD>Fare</TD>
+		      <TD>Price of the ticket</TD>
+		   </TR>
+</TABLE>
+</body>
+</html>
